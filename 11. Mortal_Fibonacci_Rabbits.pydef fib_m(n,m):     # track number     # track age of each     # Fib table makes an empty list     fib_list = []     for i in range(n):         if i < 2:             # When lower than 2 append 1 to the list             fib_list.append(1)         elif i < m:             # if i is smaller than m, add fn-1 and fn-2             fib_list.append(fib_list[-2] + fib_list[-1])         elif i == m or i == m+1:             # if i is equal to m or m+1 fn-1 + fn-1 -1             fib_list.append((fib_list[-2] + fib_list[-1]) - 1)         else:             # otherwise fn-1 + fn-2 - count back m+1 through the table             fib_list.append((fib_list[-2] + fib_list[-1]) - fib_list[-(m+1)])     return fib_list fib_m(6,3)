@@ -1,0 +1,23 @@
+## This one was extremely tough. Found it very difficult to track the number and age of each rabbit whilst also appending the numbers to a list
+## Eventually worked out it was more of a maths problem than anything else, just required the knowledge of how to go back in the list to get rid of the dead rabbits
+
+def fib_m(n,m):
+    # track number
+    # track age of each
+    # Fib table makes an empty list
+    fib_list = []
+    for i in range(n):
+        if i < 2:
+            # When lower than 2 append 1 to the list
+            fib_list.append(1)
+        elif i < m:
+            # if i is smaller than m, add fn-1 and fn-2
+            fib_list.append(fib_list[-2] + fib_list[-1])
+        elif i == m or i == m+1:
+            # if i is equal to m or m+1 fn-1 + fn-1 -1
+            fib_list.append((fib_list[-2] + fib_list[-1]) - 1)
+        else:
+            # otherwise fn-1 + fn-2 - count back m+1 through the table
+            fib_list.append((fib_list[-2] + fib_list[-1]) - fib_list[-(m+1)])
+    return fib_list
+fib_m(6,3)
