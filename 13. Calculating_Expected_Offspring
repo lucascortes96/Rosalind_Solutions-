@@ -1,0 +1,19 @@
+# Each Genotye has a different likelihood of having a dominant offspring
+# Each couple will produce two offspring 
+
+n1 = 17635
+n2 = 17613
+n3 = 18729
+n4 = 18608
+n5 = 16833
+# You can ignore 6 because it won't produce offspring 
+n6 = 16537
+
+p1 = 2
+p2 = 2
+p3 = 2
+p4 = 2 * 0.75
+p5 = 2 * 0.5
+
+answer = n1*p1 + n2*p2 + n3*p3 + n4*p4 + n5*p5
+print(answer)
